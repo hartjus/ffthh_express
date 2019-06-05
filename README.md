@@ -3,11 +3,26 @@
 An exercise that shows how to stand up a NodeJS/Express web service, that uses Sequelize ORM and PassportJS (JWT) for authentication.
 
 ## Setup
+This project requires Docker/Docker-compose.
+
 After you clone the repository, run:
 
+terminal 1
 ```sh
+> docker-compose up
+```
+
+Adminer is available at http://localhost:8080
+
+terminal 2
+```sh
+# install deps
 > npm install -g sequelize-cli express express-generator
 > npm install
+
+# Setup database
+> sequelize db:migration
+> sequelize db:seed:all
 ```
 
 ## Running 
